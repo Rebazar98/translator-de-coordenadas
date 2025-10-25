@@ -1,0 +1,4 @@
+fastapi
+uvicorn[standard]
+pyproj==3.6.1
+pydantic
