@@ -1,4 +1,4 @@
-fastapi
-uvicorn[standard]
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
 pyproj==3.6.1
-pydantic
+pydantic==2.9.2
