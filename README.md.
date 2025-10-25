@@ -1,0 +1,24 @@
+# Translator de Coordenadas (FastAPI + pyproj)
+
+Microservicio ligero para **reproyectar coordenadas** entre sistemas de referencia (CRS), pensado para flujos **n8n** y cruces **PostGIS** (point-in-polygon) en proyectos urbanísticos en España.
+
+- **API**: FastAPI
+- **Reproyección**: pyproj
+- **Deploy**: Railway (Nixpacks)
+- **CRS Soportados**: `EPSG:25829`, `EPSG:25830`, `EPSG:4326`
+
+---
+
+## ✨ Características
+
+- `POST /reproject` — Reproyecta un punto de `src` → `dst`.
+- `POST /detect` — Detecta el **huso UTM** (29/30) a partir de **lon/lat** o de un punto en 25829/25830.
+- `GET /health` — Comprobación de estado para despliegues.
+
+> Regla Península: `lon < -6° → EPSG:25829`, `lon ≥ -6° → EPSG:25830`.
+
+---
+
+## 🚀 Endpoints
+
+### Health
